@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class Conversor {
     String moedaOrigem;
     String moedaDestino;
-    int valorMoedaOrigem;
-    int valorMoedaDestino;
+    double valorMoedaOrigem;
+    double valorMoedaDestino;
     double conversor;
 
     public void entradaDeDados(){
@@ -14,25 +14,27 @@ public class Conversor {
 
 
         /*Exemplo "Real, Dólar..."*/
-        System.out.println("Qual a moeda que possui ?");
+        System.out.print("Qual a moeda que possui ?");
         moedaOrigem = leitorString.nextLine();
 
         /*Exemplo "Dólar: $ 5.45"*/
-        System.out.println("Qual o valor da moeda que possui ?");
-        valorMoedaOrigem = leitorInt.nextInt();
+        System.out.print("Qual o valor da moeda que possui ?");
+        valorMoedaOrigem = leitorInt.nextDouble();
 
         /*Exemplo "Pataca, Iene..."*/
-        System.out.println("Para qual a moeda deseja converter ?");
+        System.out.print("Para qual a moeda deseja converter ?");
         moedaDestino = leitorString.nextLine();
 
         /*Exemplo "Dólar: $ 5.45"*/
-        System.out.println("Qual o valor da moeda que deseja converter ?");
-        valorMoedaDestino = leitorInt.nextInt();
+        System.out.print("Qual o valor da moeda que deseja converter ?");
+        valorMoedaDestino = leitorInt.nextDouble();
+
+       exibirDados();
 
     }
 
     public void calculo(){
-    conversor = valorMoedaOrigem / valorMoedaDestino;
+        conversor = valorMoedaOrigem / valorMoedaDestino;
 
 
     }
