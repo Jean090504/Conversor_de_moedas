@@ -4,12 +4,12 @@ import java.util.Scanner;
 public class Conversor {
     String moedaOrigem;
     String moedaDestino;
-    double valorMoedaOrigem;
-    double valorMoedaDestino;
-    double conversor;
+    float valorMoedaOrigem;
+    float valorMoedaDestino;
+    float conversor;
 
     public void entradaDeDados(){
-        Scanner leitorInt = new Scanner(System.in);
+        Scanner leitorFloat = new Scanner(System.in);
         Scanner leitorString = new Scanner(System.in);
 
 
@@ -19,7 +19,7 @@ public class Conversor {
 
         /*Exemplo "Dólar: $ 5.45"*/
         System.out.print("Qual o valor da moeda que possui ?");
-        valorMoedaOrigem = leitorInt.nextDouble();
+        valorMoedaOrigem = leitorFloat.nextFloat();
 
         /*Exemplo "Pataca, Iene..."*/
         System.out.print("Para qual a moeda deseja converter ?");
@@ -27,9 +27,9 @@ public class Conversor {
 
         /*Exemplo "Dólar: $ 5.45"*/
         System.out.print("Qual o valor da moeda que deseja converter ?");
-        valorMoedaDestino = leitorInt.nextDouble();
+        valorMoedaDestino = leitorFloat.nextFloat();
 
-       exibirDados();
+        exibirDados();
 
     }
 
@@ -47,7 +47,7 @@ public class Conversor {
         System.out.println("VALOR DA MOEDA QUE POSSUI: " + valorMoedaOrigem );
         System.out.println("MOEDA QUE FARÁ A CONVERSÃO: " + moedaDestino);
         System.out.println("VALOR DA MOEDA QUE FARÁ A CONVERSÃO: " + valorMoedaDestino);
-        System.out.println("DIFERENÇA DE CONVERSÃO: " + conversor);
+        System.out.printf("DIFERENÇA DE CONVERSÃO: %.2f\n", conversor);
         System.out.println("*****************************");
 
     }
